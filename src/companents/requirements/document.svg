@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12.16" height="16" viewBox="0 0 12.16 16">
+  <g id="Icon_ionic-ios-document" data-name="Icon ionic-ios-document" transform="translate(0)">
+    <path id="Контур_450" data-name="Контур 450"
+      d="M21.362,7.9H25a.2.2,0,0,0,.2-.2h0a1.184,1.184,0,0,0-.428-.916L21.722,4.241a1.285,1.285,0,0,0-.824-.3h0a.3.3,0,0,0-.3.3v2.9A.76.76,0,0,0,21.362,7.9Z"
+      transform="translate(-13.042 -3.941)" fill="#fff" />
+    <path id="Контур_451" data-name="Контур 451"
+      d="M13.832,7.137v-3.2H8.592a1.284,1.284,0,0,0-1.28,1.28v13.44a1.284,1.284,0,0,0,1.28,1.28h9.6a1.284,1.284,0,0,0,1.28-1.28V8.937h-3.84A1.8,1.8,0,0,1,13.832,7.137Z"
+      transform="translate(-7.313 -3.938)" fill="#fff" />
+  </g>
+</svg>

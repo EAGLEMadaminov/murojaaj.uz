@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Segoe-UI';
+  src: url(./Segoe-UI.eot);
+  src: url(./Segoe-UI.eot?#iefix) format('embedded-opentype'),
+       url(./Segoe-UI.svg#Segoe-UI) format('svg'),
+       url(./Segoe-UI.ttf) format('truetype'),
+       url(./Segoe-UI.woff) format('woff'),
+       url(./Segoe-UI.woff2) format('woff2');
+  font-weight: bold;
+}

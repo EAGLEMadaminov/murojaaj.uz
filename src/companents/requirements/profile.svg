@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
+  <g id="Сгруппировать_1928" data-name="Сгруппировать 1928" transform="translate(-5.45 -5)">
+    <path id="Icon_awesome-user-alt" data-name="Icon awesome-user-alt" d="M6.8,7.649A3.824,3.824,0,1,0,2.975,3.824,3.825,3.825,0,0,0,6.8,7.649Zm3.4.85H8.735a4.623,4.623,0,0,1-3.872,0H3.4A3.4,3.4,0,0,0,0,11.9v.425A1.275,1.275,0,0,0,1.275,13.6H12.323A1.275,1.275,0,0,0,13.6,12.323V11.9A3.4,3.4,0,0,0,10.2,8.5Z" transform="translate(14.616 13.402)" fill="#2b2892"/>
+    <g id="Эллипс_83" data-name="Эллипс 83" transform="translate(5.45 5)" fill="none" stroke="#2b2892" stroke-width="2">
+      <ellipse cx="16.5" cy="16" rx="16.5" ry="16" stroke="none"/>
+      <ellipse cx="16.5" cy="16" rx="15.5" ry="15" fill="none"/>
+    </g>
+  </g>
+</svg>

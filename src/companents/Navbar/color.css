@@ -1,0 +1,50 @@
+/* // for colorjs  */
+.form-box {
+  width: 230px;
+  height: 130px;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  margin-top: 75px;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: rgb(0 0 0 / 20%) 0px 5px 5px -3px,
+    rgb(0 0 0 / 14%) 0px 8px 10px 1px, rgb(0 0 0 / 12%) 0px 3px 14px 2px;
+}
+.color-box {
+  display: flex;
+  justify-content: space-around;
+}
+.form-box h2 {
+  font-size: 20px;
+  margin: 10px 0px 20px;
+  color: #2b2892;
+  font-weight: bold;
+}
+.color-item button {
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f1f1ff;
+  text-align: center;
+  border: none;
+}
+.color-item h3 {
+  line-height: 50px;
+  font-size: 27px;
+  color: white;
+}
+.color-item button {
+  background-color: transparent;
+}
+.color-item:nth-of-type(1) button {
+  background-color: #2b2892;
+}
+.color-item:nth-of-type(2) button {
+  background-color: #757575;
+}
+.color-item:nth-of-type(3) button {
+  background-color: black;
+}

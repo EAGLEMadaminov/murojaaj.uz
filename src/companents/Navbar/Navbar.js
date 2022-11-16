@@ -1,17 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { HiOutlineMenu } from 'react-icons/hi'
 import { AppBar, Typography } from '@material-ui/core'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate , useLocation} from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import ColorSite from './ColorSite.js'
 import { HashLink as Link } from 'react-router-hash-link'
 import './styles.css'
-
-import FormControl from '@material-ui/core/FormControl'
-import Select from '@material-ui/core/Select'
 import { ToggleContext } from '../../App.js'
-import { makeStyles, withStyles } from '@material-ui/core/styles'
-import InputBase from '@material-ui/core/InputBase'
 import Dropdown from './Dropdown.js'
 
 const menuItems = [
@@ -22,47 +17,22 @@ const menuItems = [
   },
   {
     title: "O'z",
-    url: 'uz',
-    code: 'uz',
+    url: 'oz',
+    code: 'oz',
   },
   {
-    title: 'RU',
+    title: 'Ry',
     url: 'ru',
     code: 'ru',
   },
 ]
 
 
-const BootstrapInput = withStyles((theme) => ({
-  root: {
-    'label + &': {
-      marginTop: theme.spacing(3),
-    },
-  },
-  input: {
-    borderRadius: 4,
-    position: 'relative',
-    backgroundColor: theme.palette.background.paper,
-    border: '1px solid #ced4da',
-    fontSize: 16,
-    padding: '10px 26px 10px 12px',
-    transition: theme.transitions.create(['border-color', 'box-shadow']),
-    fontFamily: ['"Segoe UI"'].join(','),
-    '&:focus': {
-      borderRadius: 4,
-      borderColor: '#80bdff',
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-    },
-  },
-}))(InputBase)
+
 
 function Navbar() {
-  const classes = makeStyles((theme) => ({
-    margin: {
-      margin: theme.spacing(1),
-    },
-  }))
 
+  const location=useLocation()
   const naviagte = useNavigate()
   const { isOpen, firstColor, secondColor, thirdColor, openHendlerBtn } =
     useContext(ToggleContext)
@@ -79,10 +49,17 @@ function Navbar() {
     }
     return 'AppBar'
   }
-  const handleChange = (e) => {
-    localStorage.setItem('lang', e.target.value)
+
+  const checkLang=()=>{
+    if (location.pathname === '/') {
+      return '/news'
+    } else if (location.pathname === '/oz') {
+      return '/oz/news'
+    } else if (location.pathname === '/ru') {
+      return '/ru/news'
+    }
   }
-  const chooseLangLink = () => {}
+
   return (
     <AppBar
       className={AppBarColorChange(firstColor, secondColor, thirdColor)}
@@ -141,7 +118,7 @@ function Navbar() {
           className='head-link'
           variant='contained'
           component={Link}
-          to='/news'
+          to={checkLang()}
         >
           {t('head-news')}
         </Typography>

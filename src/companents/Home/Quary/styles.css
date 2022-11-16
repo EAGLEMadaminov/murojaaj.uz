@@ -1,0 +1,81 @@
+.quary-box {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  padding: 50px 0px 100px;
+}
+.check-for-robot {
+  display: flex;
+  margin: 20px 0px 30px;
+}
+.check-for-robot p {
+  width: 150px;
+}
+.check-for-robot input {
+  width: 15vw;
+}
+.quary-left-box {
+  width: 42vw;
+  text-align: left;
+  border-right: 2px solid #91d2f3;
+  padding-right: 22px;
+}
+.quary-left-box h2 {
+  color: #2b2892;
+  font-size: 25px;
+  font-weight: 700;
+}
+.quary-left-box p {
+  color: red;
+  margin: 20px 0px;
+  font-size: 18px;
+}
+.quary-left-box h3 {
+  color: #707070;
+  font-size: 18px;
+  font-weight: 700;
+}
+.quary-item {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+}
+.check-icon {
+  color: #61cf73;
+  margin-right: 15px;
+  font-size: 20px;
+}
+.quary-right-box {
+  width: 40vw;
+  text-align: left;
+  margin-left: 40px;
+}
+.quary-right-box p {
+  color: #666666;
+}
+.letter-input {
+  width: 15vw;
+}
+.number-input {
+  width: 25vw;
+}
+.birthday-input {
+  width: 40vw;
+}
+.btn-box {
+  display: flex;
+}
+.down-btn {
+  background: transparent linear-gradient(226deg, #2b2892, #4b62d8 71%, #2b2892)
+    0 0 no-repeat padding-box;
+    width: 150px;
+}
+.down-btn span {
+  color: white;
+  padding: 5px 30px;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.quary-right-box p {
+  margin: 10px 0px 30px;
+}

@@ -1,7 +1,6 @@
- import axios from axios
+// import axios from 'axios'
 
- const API =axios.create({
-  baseURL:'https://abbosxon.pm.track.uz:8020/advice'
- })
-
- export const fetchCategories=()=>API.get('/categories')
+// const baseUrl = 'https://abbosxon.pm.track.uz:8020/advice'
+// export async function fetchCategories(){
+// return fetch(`${baseUrl}/categories`)
+// }

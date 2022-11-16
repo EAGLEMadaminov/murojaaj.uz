@@ -36,5 +36,18 @@
 "portal":"Yagona interaktiv davlat xizmatlari portali",
 "documantation":"Normativ huquqiy hujjatlarining muhokamasi",
 "platform":"Jamoatchilik tashabbuslari yagona platformasi",
-"footer-info":"© 2022 Davlat axborot tizimlarini yaratish va qo‘llab-quvvatlash bo‘yicha yagona integrator UZINFOCOM"
+"footer-info":"© 2022 Davlat axborot tizimlarini yaratish va qo‘llab-quvvatlash bo‘yicha yagona integrator UZINFOCOM",
+"enter-personal-data":"Shaxsingizni tasdiqlovchi maʼlumotlarni kiriting",
+"dont-show-info":"Siz tomondan kiritilgan shaxsga doir maʼlumotlar uchinchi shaxslarga oshkor etilmaydi va tarqatilmaydi!",
+"profit-info":"Shaxsni tasdiqlovchi maʼlumotlarni kiritish quyidagi afzalliklarga ega:",
+"personal-one":"murojaat yuborish shaklining ko‘plab qismlari avtomatik ravishda to‘ldiriladi",
+"personal-two":"kiritilgan murojaat nomingizda saqlanadi va uni istalgan paytda id.egov.uz xizmati orqali tizimga kirib topishingiz mumkin bo‘ladi",
+"personal-three":"murojaatni asossiz ravishda ko‘rmasdan qoldirish holatlarining oldi olinadi",
+"passport-seria":"Seriyasi",
+"passport-number":"Raqami",
+"permit-info":"*Shaxsni tasdiqlovchi hujjat sifatida fuqarolik pasporti, ID-karta va xorijga chiqish pasportidan foydalanish mumkin",
+"birthday-data":"Tug'ilgan sana",
+"ne-robot-math":"Rasmdagi misolning javobini kiriting",
+"back-btn":"Orqaga",
+"submit-personal-data":"Jo'natish"
 }

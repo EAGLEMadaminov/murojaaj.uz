@@ -80,7 +80,7 @@ section h1 {
 }
 
 .essential {
-  background-color: #CFCFCF !important;
+  background-color: #cfcfcf !important;
 }
 .color-black .section-one {
   border-bottom: 1px solid #888888;
@@ -91,10 +91,10 @@ section h1 {
   font-size: 20px;
   font-weight: 600;
 }
-.color-black .section-one .one-left-info h2{
+.color-black .section-one .one-left-info h2 {
   color: black;
 }
-.color-black .section-one .one-left-info p{
+.color-black .section-one .one-left-info p {
   color: black;
   font-weight: 500;
 }
@@ -126,6 +126,10 @@ section h1 {
 
 .one-left-info .quary-btn:hover {
   background-color: var(--clr-primary-white);
+  font-family: Segoe-UI,Arial,sans-serif;
+  color: #2b2892;
+  font-weight: 400;
+  font-size: 21px;
 }
 .color-black .one-left-info .quary-btn:hover {
   background-color: black;
@@ -155,7 +159,7 @@ section h1 {
   background-color: black;
 }
 .color-black .section-two h1 {
-  color: #CFCFCF;
+  color: #cfcfcf;
   font-size: 20px;
 }
 .color-black .section-two .section-lines span {
@@ -180,17 +184,26 @@ section h1 {
   padding: 0 20px;
   height: 64px;
   transform: translateX(25px);
+  transition: width 0.3s;
 }
 .color-black .search-organization input {
   background-color: black;
-  color: #8A8A8A;
+  color: #8a8a8a;
   box-shadow: 0px 3px 6px #777777;
 }
 .search-organization:hover input {
-  width: 490px;
+  width: 500px;
   z-index: 10;
-  transform: translateX(70.5px);
   font-size: 18px;
+  resize: vertical;
+  direction: ltr;
+}
+.search-organization:hover .search-organ-btn {
+  width: 100px;
+  background-color: #2b2892;
+  color: white;
+  padding-right: 30px;
+  text-align: right;
 }
 .search-organ-btn {
   background: #4aa85d;
@@ -201,6 +214,10 @@ section h1 {
   width: 213px;
   transition: all 0.3s;
   font-size: 18px;
+}
+.search-icon {
+  font-size: 28px;
+  padding-left: 3px;
 }
 .color-black .search-organ-btn {
   background-color: #707070;
@@ -229,7 +246,7 @@ section h1 {
   filter: grayscale(100%);
 }
 .color-black .organization-item {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
   background-color: black;
 }
 .organization-item:hover {
@@ -237,7 +254,7 @@ section h1 {
   box-shadow: none;
 }
 .color-black .organization-item {
-  box-shadow:  #4d4c4c 0px 10px 25px -10px, #4d4c4c 0px 5px 5px -5px;;
+  box-shadow: #4d4c4c 0px 10px 25px -10px, #4d4c4c 0px 5px 5px -5px;
 }
 .organization-icon {
   box-shadow: 0 3px 6px #00000029;
@@ -339,16 +356,15 @@ section h1 {
   width: 40px;
   height: 40px;
 }
-
 .section-four {
   background-color: var(--clr-primary-white);
 }
 .color-black .section-four {
   background-color: black;
-  color: #CFCFCF;
+  color: #cfcfcf;
 }
 .color-black .section-four h1 {
-  color: #CFCFCF;
+  color: #cfcfcf;
   font-size: 20px;
   font-weight: 400;
 }
@@ -362,7 +378,7 @@ section h1 {
   /* padding-bottom: 50px; */
 }
 .color-black .section-four-body {
-  box-shadow: 0px 10px 4px #707070 ;
+  box-shadow: 0px 10px 4px #707070;
 }
 .check-box {
   display: flex;
@@ -428,7 +444,8 @@ section h1 {
 .color-black .statics-item {
   filter: grayscale(100%);
 }
-.color-black .statics-item h3, p {
+.color-black .statics-item h3,
+p {
   color: white;
 }
 .statics-item img {
@@ -448,7 +465,7 @@ section h1 {
 .color-black .statics-info {
   filter: grayscale(100%);
 }
-.color-black .statics-info h3{
+.color-black .statics-info h3 {
   color: white;
 }
 .first-statics-info {
@@ -477,14 +494,14 @@ section h1 {
   filter: grayscale(100%);
 }
 .color-black .web-sites .site-item {
-   box-shadow: 0 15px 20px #1f1e1e;
+  box-shadow: 0 15px 20px #1f1e1e;
 }
 .color-black .web-sites .site-item:hover {
- border-color: #c7c6ef;
- box-shadow: none;
+  border-color: #c7c6ef;
+  box-shadow: none;
 }
 .color-black .web-sites .site-item p {
-color: #CFCFCF;
+  color: #cfcfcf;
 }
 .link-image {
   height: 100px;
@@ -544,7 +561,7 @@ color: #CFCFCF;
 }
 .color-black .footer-link:hover {
   background-color: #1f1e1e;
-  color: #CFCFCF;
+  color: #cfcfcf;
 }
 
 .footer-icon {

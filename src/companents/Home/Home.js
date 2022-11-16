@@ -13,12 +13,13 @@ import { ToggleContext } from '../../App'
 import { ReCAPTCHA } from 'react-google-recaptcha'
 import { useTranslation } from 'react-i18next'
 import Statistika from './Statistika.js'
+import SendQuary from './Quary/SendQuary'
 
 function Home() {
   const [dat, setDat] = useState([])
   const { t } = useTranslation()
   const [textSearch, setTextSearch] = useState(false)
-  const { firstColor, secondColor, thirdColor } = useContext(ToggleContext)
+  const { firstColor, secondColor, thirdColor, openQuaryBox, setOpenQuaryBox } = useContext(ToggleContext)
 
   const changeColorInput = () => {
     changeColorInput.className = 'change-in'
@@ -32,14 +33,16 @@ function Home() {
 
   useEffect(() => {
     getData()
-  }, [getData()])
+  }, [getData])
 
-  const handleSubmitBtn = () => {}
+  const handleSubmitBtn = () => {
+    setOpenQuaryBox(true)
+  }
   const searchOrganization = () => {}
   const inputRef = useRef()
   function focus() {
     inputRef.current.focus()
-    setTextSearch(!textSearch)
+    setTextSearch(false)
   }
 
   const AppBarColorChange = (d, e, f) => {
@@ -67,20 +70,28 @@ function Home() {
   const onSubmitWithReCAPTCHA = async () => {
     const token = await recaptchaRef.current.executeAsync()
   }
+  const searchTagsForm = (e) => {
+    e.preventDefault()
+    console.log('Salom')
+  }
   return (
     <div className={AppBarColorChange(firstColor, secondColor, thirdColor)}>
-      <section className='section-one'>
-        <div className='one-left-info'>
-          <h2>{t('send-request')}</h2>
-          <p>{t('allow-request')}</p>
-          <Button className='quary-btn' onClick={handleSubmitBtn}>
-            {t('request-btn')}
-          </Button>
-        </div>
-        <div className='one-right-image'>
-          <img src={Biglogo} alt='site-big-logo' />
-        </div>
-      </section>
+      {openQuaryBox ? (
+        <SendQuary />
+      ) : (
+        <section className='section-one'>
+          <div className='one-left-info'>
+            <h2>{t('send-request')}</h2>
+            <p>{t('allow-request')}</p>
+            <Button className='quary-btn' onClick={handleSubmitBtn}>
+              {t('request-btn')}
+            </Button>
+          </div>
+          <div className='one-right-image'>
+            <img src={Biglogo} alt='site-big-logo' />
+          </div>
+        </section>
+      )}
 
       <section
         className={
@@ -94,18 +105,33 @@ function Home() {
           <span className='section-line2'></span>
           <span className='section-line3'></span>
         </div>
-        <div className='search-organization' onMouseEnter={focus}>
-          <input
-            placeholder={t('organization-input')}
-            type='text'
-            name=''
-            id=''
-            ref={inputRef}
-            onChange={searchOrganization}
-          />
-          <button onClick={focus} className='search-organ-btn'>
-            {t('search-organ')} <FiSearch />
-          </button>
+        <div
+          className='search-organization'
+          onMouseEnter={focus}
+          onMouseLeave={() => setTextSearch(true)}
+          key='1'
+        >
+          <form
+            action=''
+            className='search-organization'
+            onSubmit={searchTagsForm}
+          >
+            <input
+              placeholder={t('organization-input')}
+              type='text'
+              name=''
+              id=''
+              ref={inputRef}
+              onChange={searchOrganization}
+            />
+            <button onClick={focus} className='search-organ-btn'>
+              {textSearch ? (
+                t('search-organ')
+              ) : (
+                <FiSearch className='search-icon' />
+              )}
+            </button>
+          </form>
         </div>
         <div className='organization-home'>
           <div className='organization-item'>
@@ -183,18 +209,32 @@ function Home() {
           <span className='section-line2'></span>
           <span className='section-line3'></span>
         </div>
-        <div className='search-organization' onMouseEnter={focus}>
-          <input
-            placeholder={t('organization-input')}
-            type='text'
-            name=''
-            id=''
-            ref={inputRef}
-            onChange={searchOrganization}
-          />
-          <button onClick={focus} className='search-organ-btn'>
-            {t('search-organ')} <FiSearch />
-          </button>
+        <div
+          className='search-organization'
+          onMouseEnter={focus}
+          onMouseLeave={() => setTextSearch(true)}
+        >
+          <form
+            action=''
+            className='search-organization'
+            onSubmit={searchTagsForm}
+          >
+            <input
+              placeholder={t('organization-input')}
+              type='text'
+              name=''
+              id=''
+              ref={inputRef}
+              onChange={searchOrganization}
+            />
+            <button onClick={focus} className='search-organ-btn'>
+              {textSearch ? (
+                t('search-organ')
+              ) : (
+                <FiSearch className='search-icon' />
+              )}
+            </button>
+          </form>
         </div>
         <div className='humans-right-rule'>
           {dat.map((item, index) => (

@@ -12,6 +12,7 @@ function App() {
   const [firstColor, setFirstColor] = useState(false)
   const [secondColor, setSecondColor] = useState(false)
   const [thirdColor, setThirdColor] = useState(false)
+  const [openQuaryBox, setOpenQuaryBox] = useState(false)
 
   const handleColorBlue = () => {
     setFirstColor(true)
@@ -30,7 +31,7 @@ function App() {
   }
   const openHendlerBtn = () => {
     setIsOpen(!isOpen)
-  } 
+  }
 
   const AppBarColorChange = (d, e, f) => {
     if (e) {
@@ -57,6 +58,8 @@ function App() {
           handleColorBlack,
           isOpen,
           setIsOpen,
+          openQuaryBox,
+          setOpenQuaryBox,
         }}
       >
         <div
@@ -66,7 +69,11 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/oz' element={<Home />} />
+            <Route path='/ru' element={<Home />} />
             <Route path='/news' element={<News />} />
+            <Route path='/oz/news' element={<News />} />
+            <Route path='/ru/news' element={<News />} />
             <Route path='/#statistika' element={<Statistika />} />
           </Routes>
         </div>

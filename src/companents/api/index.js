@@ -1,6 +1,5 @@
-// import axios from 'axios'
+const baseUrl = 'http://pokeapi.co/api/v2'
 
-// const baseUrl = 'https://abbosxon.pm.track.uz:8020/advice'
-// export async function fetchCategories(){
-// return fetch(`${baseUrl}/categories`)
-// }
+export async function fetchPokemon(pokemon){
+ console.log(`${baseUrl}/${pokemon}`);
+}

@@ -7,13 +7,20 @@
 .check-for-robot {
   display: flex;
   margin: 20px 0px 30px;
+  align-items: center;
 }
 .check-for-robot p {
-  width: 150px;
+  width: 12vw;
+}
+.check-for-robot span {
+  font-size: 26px;
+  margin: 0px 20px;
 }
 .check-for-robot input {
   width: 15vw;
+  margin-left: 20px;
 }
+
 .quary-left-box {
   width: 42vw;
   text-align: left;
@@ -78,4 +85,58 @@
 }
 .quary-right-box p {
   margin: 10px 0px 30px;
+}
+.color-easy .quary-box {
+  background-color: white;
+  padding: 50px 0px 100px;
+}
+.color-easy .quary-left-box h2 {
+  color: #303030;
+}
+.color-easy .quary-left-box p {
+  color: #5A5A5A;
+}
+.color-easy .quary-left-box .check-icon {
+  color: #B1B1B1;
+}
+.color-easy .quary-left-box {
+  border-color: #C7C7C7;
+}
+.color-easy .quary-right-box .down-btn {
+ filter: grayscale(100%);
+}
+
+.color-black .quary-left-box {
+  border-color: #383838;
+}
+.color-black .quary-left-box h2 {
+  color: #CFCFCF;
+}
+.color-black .quary-left-box {
+  color:#888888;
+}
+.color-black .quary-left-box .check-icon {
+  color: #4E4E4E;
+}
+.color-black .quary-left-box p {
+  color: #888888;
+}
+.color-black .quary-right-box  .change-color-input  {
+  border-color: #3B3B3B;
+  border: 1px solid #3B3B3B;
+  border-radius: 4px;
+  color: white;
+}
+.color-black .quary-right-box InputlabelProps {
+  color: #999999;
+}
+.color-black .textField_label {
+color: #999999 !important;
+border-color: #999999 !important;
+}
+.color-black .textField_border {
+  color: #DEDEDE;
+}
+.color-black .quary-right-box .down-btn {
+  filter: grayscale(100%) brightness(50%);
 }

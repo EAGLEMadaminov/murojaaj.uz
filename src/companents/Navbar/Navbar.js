@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { HiOutlineMenu } from 'react-icons/hi'
 import { AppBar, Typography } from '@material-ui/core'
-import { useNavigate , useLocation} from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import ColorSite from './ColorSite.js'
 import { HashLink as Link } from 'react-router-hash-link'
@@ -27,12 +27,8 @@ const menuItems = [
   },
 ]
 
-
-
-
 function Navbar() {
-
-  const location=useLocation()
+  const location = useLocation()
   const naviagte = useNavigate()
   const { isOpen, firstColor, secondColor, thirdColor, openHendlerBtn } =
     useContext(ToggleContext)
@@ -50,7 +46,7 @@ function Navbar() {
     return 'AppBar'
   }
 
-  const checkLang=()=>{
+  const checkLang = () => {
     if (location.pathname === '/') {
       return '/news'
     } else if (location.pathname === '/oz') {
@@ -107,11 +103,7 @@ function Navbar() {
         </div>
       </div>
       <div className='header-site-link'>
-        <Link
-          className='head-link'
-          variant='contained'
-          to='/'
-        >
+        <Link className='head-link' variant='contained' to='/'>
           {t('head-link')}
         </Link>
         <Typography

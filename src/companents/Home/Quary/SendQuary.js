@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Button, TextField } from '@material-ui/core'
 import { FaCheck } from 'react-icons/fa'
 import { ToggleContext } from '../../../App'
@@ -7,7 +7,9 @@ import './styles.css'
 
 const SendQuary = () => {
   const { t } = useTranslation()
-  const { firstColor, secondColor, thirdColor, openQuaryBox, setOpenQuaryBox } =
+  const [randomValue, setRandomValue] = useState(0)
+  const [randomValue2, setRandomValue2] = useState(0)
+  const { firstColor, secondColor, thirdColor, setOpenQuaryBox } =
     useContext(ToggleContext)
 
   const changeQuaryColor = () => {
@@ -20,8 +22,22 @@ const SendQuary = () => {
     }
   }
 
+  function generateRandom(random, random2) {
+    const min = 1
+    const max = 9
+    random = min + Math.random() * (max - min)
+    random2 = Math.floor(Math.random() * (max - min + 1)) + min
+    return random, random2
+  }
+  useEffect((random2) => {
+    const randomValue = generateRandom()
+    const randomValue2 = generateRandom()
+    setRandomValue(randomValue)
+    setRandomValue2(randomValue2)
+  }, [])
+
   return (
-    <div className={changeQuaryColor}>
+    <div className={changeQuaryColor()}>
       <div className='quary-left-box'>
         <h2>{t('enter-personal-data')}</h2>
         <p>{t('dont-show-info')}</p>
@@ -44,26 +60,37 @@ const SendQuary = () => {
       <div className='quary-right-box'>
         <form>
           <TextField
-            className='letter-input'
+            className='letter-input change-color-input'
             variant='outlined'
             label={t('passport-seria')}
+            InputLabelProps={{ className: 'textField_label' }}
           />
           <TextField
-            className='number-input'
+            className='number-input change-color-input'
             variant='outlined'
             type='number'
             label={t('passport-number')}
+            InputLabelProps={{ className: 'textField_label' }}
           />
           <p>{t('permit-info')}</p>
           <TextField
-            className='birthday-input'
+            className='birthday-input change-color-input'
             variant='outlined'
             onClick={(e) => console.log((e.target.type = 'date'))}
             label={t('bithday-data')}
+            InputLabelProps={{ className: 'textField_label' }}
           />
           <div className='check-for-robot'>
             <p>{t('ne-robot-math')}</p>
-            <TextField variant='outlined' />
+            <span>
+              {randomValue} + {randomValue2} =
+            </span>
+            <TextField
+              className='change-color-input'
+              variant='outlined'
+              InputLabelProps={{ className: 'textField_label' }}
+              inputProps={{ className: 'textField_border' }}
+            />
           </div>
           <div className='btn-box'>
             <Button
